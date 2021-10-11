@@ -1,0 +1,31 @@
+@use '../abstratcs/' as *;
+
+.header{
+  background-image: url('#{$img-path}/pattern-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  min-height: rem(300);
+  padding: rem(30) rem(24);
+  position: relative;
+  @include breakpoint('large'){
+    min-height: rem(280);
+  }
+  &__wrapper{
+    width: 100%;
+    max-width: rem(1110);
+    margin: 0 auto;
+  }
+  &__title{
+    font-size: rem(26);
+    font-weight: var(--font-Medium);
+    color: var(--primary-white);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: rem(30);
+    @include breakpoint('large'){
+      font-size: rem(32);
+    }
+  }
+}

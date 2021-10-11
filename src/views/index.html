@@ -9,6 +9,41 @@
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
 <body>
- <h1>Rubik</h1>
+  <header class="header">
+    <div class="header__wrapper">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <form id="formIpAddress" autocomplete="off">
+        <div class="form__group">
+          <input type="text" class="form__control" name="ip_address" id="ip_address" placeholder="Search for any IP address or domain">
+          <button type="submit" class="form__submit"></button>
+        </div>
+      </form>
+      <div class="tracker">
+        <ul class="tracker__list">
+          <li class="tracker__item">
+            <h2 class="tracker__label">Ip Address</h2>
+            <span class="tracker__text">192.212.174.101</span>
+          </li>
+          <li class="tracker__item">
+            <h2 class="tracker__label">Location</h2>
+            <span class="tracker__text">Brooklyn, NY 10001</span>
+          </li>
+          <li class="tracker__item">
+            <h2 class="tracker__label">Timezone</h2>
+            <span class="tracker__text">UTC-05:00</span>
+          </li>
+          <li class="tracker__item">
+            <h2 class="tracker__label">ISP</h2>
+            <span class="tracker__text">SpaceX Starlink</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="map">
+      
+    </section>
+  </main>
 </body>
 </html>

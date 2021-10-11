@@ -7,8 +7,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const rulesForCss = {
   test: /\.scss$/,   
   use: [
-    MiniCssExtractPlugin.loader,
-    // 'style-loader',
+    // MiniCssExtractPlugin.loader,
+    'style-loader',
     {
       loader: "css-loader",
       options: {

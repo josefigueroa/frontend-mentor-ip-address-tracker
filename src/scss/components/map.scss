@@ -1,0 +1,9 @@
+@use '../abstratcs/' as *;
+
+.map{
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  @include breakpoint('large'){
+    min-height: calc(100vh - 280px);
+  }
+}

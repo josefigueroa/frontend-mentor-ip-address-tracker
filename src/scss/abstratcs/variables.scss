@@ -38,11 +38,13 @@ $theme-fonts: (
 
 $darkGray: hsl(0, 0%, 17%);
 $gray: hsl(0, 0%, 59%);
+$white: hsl(0, 0%, 100%);
 
 $theme-colors: (
 	primary: (
 		'darkGray': $darkGray,
-		'gray': $gray
+		'gray': $gray,
+		'white': $white
 	)
 );
 
@@ -50,7 +52,7 @@ $theme-colors: (
 $font-family-base: Rubik;
 $font-size-base: 18px;
 $font-weight-base: var(--font-Regular);
-$body-bg: #fff;
+$body-bg: red;
 
 //PATH
 $img-path: '../img';

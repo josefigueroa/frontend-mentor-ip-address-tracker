@@ -1,0 +1,70 @@
+@use '../abstratcs/' as *;
+
+.tracker{
+  background-color: var(--primary-white);
+  border-radius: rem(15);
+  padding: rem(24);
+  text-align: center;
+  position: absolute;
+  width: calc(100% - 48px);
+  max-width: rem(1110);
+  @include breakpoint('large'){
+    text-align: left;
+    padding: rem(35) rem(30);
+  }
+  &__list{
+    @include breakpoint('large'){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__item{
+    margin-bottom: rem(24);
+    @include breakpoint('large'){
+      position: relative;
+      margin-bottom: 0;
+      max-width: rem(188);
+      width: 100%;
+      &:not(:last-child):after{
+        content: '';
+        background-color: var(--primary-gray);
+        opacity: .5;
+        width: 1px;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: -25%;
+      }
+      &:not(:first-child){
+        padding-left: rem(8);
+      }
+    }
+    @include breakpoint('xlarge'){
+      &:not(:first-child){
+        padding-left: 0;
+      }
+    }
+   
+  }
+  &__label{
+    font-size: rem(10);
+    margin-bottom: rem(12);
+    margin-top: 0;
+    text-transform: uppercase;
+    display: block;
+    color: var(--primary-gray);
+    font-weight: var(--font-Bold);
+    @include breakpoint('large'){
+      font-size: rem(12);
+      margin-bottom: rem(24);
+    }
+  }
+  &__text{
+    font-size: rem(18);
+    font-weight: var(--font-Bold);
+    @include breakpoint('large'){
+      font-size: rem(24);
+    }
+  }
+}
