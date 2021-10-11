@@ -31,17 +31,25 @@ $spacer: (
 );
 
 $theme-fonts: (
-	300: 'Light',
 	400: 'Regular',
 	500: 'Medium',
 	700: 'Bold',
-	900: 'Black'
+);
+
+$darkGray: hsl(0, 0%, 17%);
+$gray: hsl(0, 0%, 59%);
+
+$theme-colors: (
+	primary: (
+		'darkGray': $darkGray,
+		'gray': $gray
+	)
 );
 
 //BASE
-$font-family-base: Poppins;
-$font-size-base: 1rem;
-$font-weight-base: 400;
+$font-family-base: Rubik;
+$font-size-base: 18px;
+$font-weight-base: var(--font-Regular);
 $body-bg: #fff;
 
 //PATH
