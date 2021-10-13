@@ -8,6 +8,12 @@
   position: absolute;
   width: calc(100% - 48px);
   max-width: rem(1110);
+  z-index: 8;
+  opacity: 0;
+  transition: opacity .4s;
+  &__show{
+    opacity: 1;
+  }
   @include breakpoint('large'){
     text-align: left;
     padding: rem(35) rem(30);

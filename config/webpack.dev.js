@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const rulesForCss = {
-  test: /\.scss$/,   
+  test: /\.css|.scss$/,   
   use: [
     // MiniCssExtractPlugin.loader,
     'style-loader',
@@ -27,16 +27,27 @@ const rulesForCss = {
   ]
 };
 
+const rulesForImg = {
+  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  type: 'asset/resource',
+  generator: {
+    filename: 'img/[hash][ext][query]'
+  }
+};
+
 const rulesForJS = {
   test: /\.js$/,
   exclude: /node_modules/,
   loader: 'babel-loader',
   options: {
-    presets: ['@babel/preset-env']
+    presets: ['@babel/preset-env'],
+    plugins: [
+      "@babel/plugin-transform-runtime"
+    ]
   }
 };
 
-const rules = [rulesForCss, rulesForJS];
+const rules = [rulesForCss, rulesForJS, rulesForImg];
 
 
 const devConfig = {

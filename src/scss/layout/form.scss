@@ -4,11 +4,31 @@
   &__group{
     display: flex;
     margin-bottom: rem(24);
+    position: relative;
     @include breakpoint('large'){
       max-width: rem(555);
       margin-left: auto;
       margin-right: auto;
       margin-bottom: rem(48);
+    }
+    &--error{
+      margin-bottom: rem(34);
+      @include breakpoint('large'){
+        margin-bottom: rem(48);
+      }
+      &::after{
+        content: 'You have entered an invalid IP address or Ip domain';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 58px;
+        color: #f1553a;
+        font-weight: var(--font-Bold);
+        font-size: rem(12);    
+        @include breakpoint('large'){
+          font-size: rem(18);  
+        }  
+      }
     }
   }
   &__control{

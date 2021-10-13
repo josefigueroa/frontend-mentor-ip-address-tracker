@@ -22,27 +22,30 @@
         <ul class="tracker__list">
           <li class="tracker__item">
             <h2 class="tracker__label">Ip Address</h2>
-            <span class="tracker__text">192.212.174.101</span>
+            <span id="trackerIP" class="tracker__text"></span>
           </li>
           <li class="tracker__item">
             <h2 class="tracker__label">Location</h2>
-            <span class="tracker__text">Brooklyn, NY 10001</span>
+            <span id="trackerLocation" class="tracker__text"></span>
           </li>
           <li class="tracker__item">
             <h2 class="tracker__label">Timezone</h2>
-            <span class="tracker__text">UTC-05:00</span>
+            <span id="trackerTimezone" class="tracker__text"></span>
           </li>
           <li class="tracker__item">
             <h2 class="tracker__label">ISP</h2>
-            <span class="tracker__text">SpaceX Starlink</span>
+            <span id="trackerISP" class="tracker__text"></span>
           </li>
         </ul>
       </div>
     </div>
   </header>
   <main>
-    <section class="map">
-      
+    <section class="map" id='mapId'>
+      <div class="map__spinner">
+        <div class="pin"></div>
+        <div class="pulse"></div>
+      </div>     
     </section>
   </main>
 </body>

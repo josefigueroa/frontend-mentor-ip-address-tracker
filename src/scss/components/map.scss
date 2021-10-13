@@ -3,6 +3,11 @@
 .map{
   width: 100%;
   min-height: calc(100vh - 300px);
+  width: 100%;
+  z-index: 7;
+  // opacity: 0;
+  transition: opacity .4s;
+  position: relative;
   @include breakpoint('large'){
     min-height: calc(100vh - 280px);
   }
