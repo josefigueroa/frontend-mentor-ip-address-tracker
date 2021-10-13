@@ -13,11 +13,11 @@ export class Tracker{
   }
 
   trackerInfo(data){
-    const {query, city, country, zip, timezone, isp} = data;
+    const {ip, location: {city, country, postalCode, timezone}, isp} = data;
 
-    this.ipEl.textContent = query;
-    this.locationEl.innerHTML = `${city}, ${country} ${zip}`;
-    this.timezoneEl.textContent = timezone;
+    this.ipEl.textContent = ip;
+    this.locationEl.innerHTML = `${city}, ${country} ${postalCode}`;
+    this.timezoneEl.textContent = `UTC ${timezone}`;
     this.ispEl.textContent = isp;
   }
 

@@ -12,7 +12,7 @@ const fetchApi = async (query) => {
   let data = await api.getIP(query);
 
   tracker.displayInfo(data);
-  new Map(data.lat, data.lon);
+  new Map(data.location.lat, data.location.lng);
 }
 
 const formValidation = (ipValue) =>{
